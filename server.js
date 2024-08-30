@@ -8,8 +8,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
 
 app.get("/", (req, res) => {
-  const currentDate = new Date().toLocaleDateString();
-  res.render("index", { date: currentDate });
+  res.sendFile(path.join(__dirname, "test.html"));
 });
 
 app.listen(port, () => {
